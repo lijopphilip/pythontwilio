@@ -20,7 +20,7 @@ def home():
     sms_message = request.args.get('message')
     if telephone!=None and sms_message!=None:
         account_sid = 'AC110b053229169c1d12b2778af7f24ae1' 
-        auth_token = 'ef7300dea18a795e9757eaae69b63165' 
+        auth_token = '1fe21396471a8d2738a135f35fe36e3f' 
         client = Client(account_sid, auth_token) 
         
         message = client.messages.create( 
@@ -39,7 +39,7 @@ def home():
 if __name__ == "__main__":
     app.secret_key = 'ItIsASecret'
     app.debug = True
-    app.run()
+    app.run(host = '0.0.0.0', port = 5000)
 """
 telephone = sys.argv[1]
 account_sid = 'AC110b053229169c1d12b2778af7f24ae1' 
